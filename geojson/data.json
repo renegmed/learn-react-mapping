@@ -1,0 +1,10 @@
+{
+    
+    "type": "FeatureCollection",
+    "features": [
+          {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-73.985675, 40.748963]}, "properties":{"name": "John Doe","age": 25}},
+          {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-73.975675, 40.745963]}, "properties":{"name": "Jane Dane","age": 75}},
+          {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-73.974675, 40.744963]}, "properties":{"name": "Daniel Cruz","age": 44}},
+          {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-73.973675, 40.743963]}, "properties":{"name": "Elizabeth Cook","age": 25}}
+    ]
+}
