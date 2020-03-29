@@ -4,7 +4,7 @@ import {render} from 'react-dom';
 import ReactMapGL, {Source, Layer} from 'react-map-gl'; 
 import patientData from '../data.json'
 
-const MAPBOX_TOKEN = env.process.REACT_APP_MAPBOX_TOKEN;
+const MAPBOX_TOKEN = process.env.REACT_APP_MAPBOX_TOKEN;
   
 export default class App extends Component {
   state = {
@@ -42,7 +42,7 @@ export default class App extends Component {
     } = event;
 
     console.log("+++ _onHover()++++\n", features)
-    const hoveredFeature = features; // && features.find(f => f.layer.id === 'data');
+    const hoveredFeature = features && features.find(f => f.layer.id === 'data');
 
     this.setState({hoveredFeature, x: offsetX, y: offsetY});
   };
@@ -50,7 +50,7 @@ export default class App extends Component {
   _renderTooltip() {
     const {hoveredFeature, x, y} = this.state;
     
-    onsole.log("++++ _renderTooltip() hoveredFeatuer +++\n", hoveredFeature)
+    console.log("++++ _renderTooltip() hoveredFeatuer +++\n", hoveredFeature)
 
     return (
       hoveredFeature && (
@@ -67,6 +67,7 @@ export default class App extends Component {
 
     //console.log("++++ render() +++\n", data); // good
 
+    console.log("++++++++ MAPBOX_TOKEN ++++++",MAPBOX_TOKEN)
     return ( 
      
       <div style={{height: '80%', position: 'relative'}}>
